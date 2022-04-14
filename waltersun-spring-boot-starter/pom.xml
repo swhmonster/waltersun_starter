@@ -8,7 +8,7 @@
         <version>2.6.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <groupId>com.waltersun</groupId>
     <artifactId>waltersun-spring-boot-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>waltersun-spring-boot-starter</name>
@@ -37,6 +37,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.80_noneautotype</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -55,5 +68,14 @@
             </plugin>
         </plugins>
     </build>
-
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://repo.alibaba-inc.com/nexus/content/groups/public/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://repo.alibaba-inc.com/nexus/content/groups/public/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
